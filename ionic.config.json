@@ -1,0 +1,7 @@
+{
+  "name": "euskobus",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
