@@ -1,0 +1,36 @@
+{
+  "COMMON":{
+    "TITLE":"Euskobus",
+    "HOME":"Inicio",
+    "MENU":"Menu",
+    "ALL":"Todos",
+    "NO_DATA":"No hay datos",
+    "NORESULT":"No hay datos, desliza hacia abajo para recargar",
+    "ERROR":"Ha ocurrido un error, desliza hacia abajo para recargar",
+    "LINES":"Lineas",
+    "STATIONS":"Paradas",
+    "GEOLOCATION":"Golocalización",
+    "SCHEDULES":"Horarios",
+    "SCHEDULES_LINES":"Horarios / Lineas",
+    "MAP":"Mapas",
+    "FROM":"Desde",
+    "TO":"Hasta",
+    "LINE":"Linea",
+    "NOTIFICATION_MESSAGE":"Puede que algunos puntos no se muestren correctamente",
+    "CREATE_BY":"by Crislaez",
+    "APP_DESCRIPTION":"Euskalfic es una aplicacion para poder listar las incidencias, camaras, flows y delegaciones del pais vasco y poder viseualizarlas en el mapa",
+    "APP_FIND":"Cualquier pregunta o problema, puede contactarme al correo crislaez30@gmail.com, o a través de los siguientes enlaces",
+    "APP_FAREWELL":"Muchas gracias :)"
+  },
+  "FILTERS":{
+    "BY_NAME":"Nombre..."
+  },
+  "ERRORS":{
+    "ERROR_LOAD_LINES":"Error al cargar las líneas",
+    "ERROR_LOAD_LINE":"Error al cargar la línea",
+    "ERROR_LOAD_STATIONS":"Error al cargar las paradas",
+    "ERROR_LOAD_STATION":"Error al cargar la parada",
+    "ERROR_LOAD_SCHEDULES":"Error al cargar los horarios",
+    "ERROR_LOAD_SCHEDULE":"Error al cargar el horario"
+  }
+}

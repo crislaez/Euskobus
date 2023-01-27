@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  baseEndpoint: 'http://apps.bizkaia.eus/BBOA000M/rest/BBOA/',
 };
 
 /*

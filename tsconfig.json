@@ -6,6 +6,8 @@
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
@@ -19,10 +21,16 @@
     "target": "es2015",
     "module": "es2020",
     "lib": [
-      "es2018", 
+      "es2018",
       "dom"
     ],
-    "useDefineForClassFields": false
+    "useDefineForClassFields": false,
+    "paths":{
+      "@euskobus/shared/*": ["./src/app/shared/*"],
+      "@euskobus/core/*": ["./src/app/core/*"],
+      "@euskobus/shared-ui/*": ["./src/app/shared-ui/*"],
+      "@euskobus/theme/*": ["./src/theme/*"],
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

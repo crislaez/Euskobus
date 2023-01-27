@@ -1,0 +1,37 @@
+@import '../../../../theme/variables.scss';
+
+form{
+  width: 90%;
+  margin: 0 auto;
+}
+
+app-skeleton-card{
+  width: 94%;
+}
+
+ion-accordion-group{
+  width: 94%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+
+  ion-accordion{
+    min-height: 100px !important;
+    border-radius: 5px;
+
+    ion-item{
+      height: 100px !important;
+      --background: none;
+    }
+
+    ion-item::part(native) {
+      height: 100px !important;
+      border-bottom: none;
+    }
+
+    ion-item.no-border {
+      --border-width: 0;
+    }
+  }
+
+}
+
