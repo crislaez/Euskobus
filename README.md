@@ -48,7 +48,7 @@ Release date: Enero 27, 2023
 - [X] Listado Paradas.
 - [X] Filtro Paradas.
 - [X] Mapa Paradas.
-- [X] Mapa - Mapa Geoloccalización..
+- [X] Mapa Geoloccalización.
 - [ ] Test.
 
 ### Donde pueden recibir ayuda los usuarios con el proyecto
