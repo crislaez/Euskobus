@@ -9,21 +9,19 @@
 * Html
 * Rxjs
 * Ngrx
-* Api publica (https://www.opendata.euskadi.eus/api-traffic/?api=traffic#/flows:%20level%20of%20service/getLevelOfServices)
+* Api publica (http://apps.bizkaia.eus/BBOA000M/rest/BBOA/)
 
 <img src="https://github.com/crislaez/Euskobus/blob/master/src/assets/images/euskobus_1.jpg" />
 <hr>
-<img src="https://github.com/crislaez/Euskobus/blob/master/src/assets/images/euskobus_1.jpg" />
+<img src="https://github.com/crislaez/Euskobus/blob/master/src/assets/images/euskobus_2.jpg" />
 <hr>
-<img src="https://github.com/crislaez/Euskobus/blob/master/src/assets/images/euskobus_1.jpg" />
+<img src="https://github.com/crislaez/Euskobus/blob/master/src/assets/images/euskobus_3.jpg" />
 <hr>
-<img src="https://github.com/crislaez/Euskobus/blob/master/src/assets/images/euskobus_1.jpg" />
+<img src="https://github.com/crislaez/Euskobus/blob/master/src/assets/images/euskobus4.jpg" />
 <hr>
-<img src="https://github.com/crislaez/Euskobus/blob/master/src/assets/images/euskobus_1.jpg" />
+<img src="https://github.com/crislaez/Euskobus/blob/master/src/assets/images/euskobus_5.jpg" />
 <hr>
-<img src="https://github.com/crislaez/Euskobus/blob/master/src/assets/images/euskobus_1.jpg" />
-<hr>
-<img src="https://github.com/crislaez/Euskobus/blob/master/src/assets/images/euskobus_1.jpg" />
+<img src="https://github.com/crislaez/Euskobus/blob/master/src/assets/images/euskobus_6.jpg" />
 <hr>
 
 
@@ -35,29 +33,22 @@ Euskalfic muestra las incidencias, flujos, y camaras disponibles y pintadas en e
 
 ### 1.0
 
-Release date: Enero 05, 2023
+Release date: Enero 27, 2023
 
-- Listado Incidencias.
-- Listado Flujos.
-- Listado Camaras.
-- Listado Delegaciones.
-- Mapa Incidencias.
-- Mapa Flujos.
-- Mapa Camaras.
+- Listado Lineas / Horarios.
+- Listado Paradas.
+- Mapa Paradas.
+- Mapa Geoloccalización.
 
 
 ### Roadmap
 
-- [X] Listado Incidencias.
-- [X] Filtro Incidencias.
-- [X] Mapa Incidencias.
-- [X] Listado Flujos.
-- [X] Filtro Flujos.
-- [X] Mapa Flujos.
-- [X] Listado Camaras.
-- [X] Filtro Camaras.
-- [X] Mapa Camaras.
-- [X] Listado Delegaciones.
+- [X] Listado Lineas / Horarios.
+- [X] Filtro Lineas / Horarios.
+- [X] Listado Paradas.
+- [X] Filtro Paradas.
+- [X] Mapa Paradas.
+- [X] Mapa - Mapa Geoloccalización..
 - [ ] Test.
 
 ### Donde pueden recibir ayuda los usuarios con el proyecto

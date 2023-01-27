@@ -8,7 +8,7 @@ import { getLastNumber, gotToTop, sliceText, trackById } from '@euskobus/shared/
 import { ComponentState } from '@euskobus/shared/utils/models';
 import { IonContent, Platform } from '@ionic/angular';
 import { Store } from '@ngrx/store';
-import { map, switchMap, tap } from 'rxjs';
+import { map, shareReplay, switchMap, tap } from 'rxjs';
 
 @Component({
   selector: 'app-schedule',
@@ -21,9 +21,9 @@ import { map, switchMap, tap } from 'rxjs';
     <div class="container components-background-dark">
       <h1 class="text-color-gradient">{{ 'COMMON.SCHEDULES_LINES' | translate }}</h1>
 
-      <div class="displays-center width-max heigth-min">
+      <div class="displays-center width-max heigth-min" *ngIf="scheduleStatus$ | async as scheduleStatus">
         <!-- FORM  -->
-        <form (submit)="searchSubmit($event)">
+        <form (submit)="searchSubmit($event)" *ngIf="['loaded']?.includes(scheduleStatus)">
           <ion-searchbar [placeholder]="'FILTERS.BY_NAME' | translate" [formControl]="search" (ionClear)="clearSearch($event)"></ion-searchbar>
         </form>
       </div>
@@ -121,7 +121,7 @@ export class SchedulePage {
   baseSlice: number = 10;
   search = new FormControl('');
 
-  scheduleStatus$ = this.store.select(fromSchedule.selectStatus);
+  scheduleStatus$ = this.store.select(fromSchedule.selectStatus).pipe(shareReplay(1));
   componentState!: ComponentState;
   trigger = new EventEmitter<ComponentState>();
   scheduleInfo$ = this.trigger.pipe(
@@ -134,7 +134,7 @@ export class SchedulePage {
         map((schedules) => {
           const searchLower = search?.toLocaleLowerCase() || '';
           const sliceSchedules = search
-                                ? (schedules || [])?.filter((item: any) => item?.['DESKRIPZIOA-DESCRIPCION']?.includes(searchLower) || item?.['DESKRIPZIOA-DESCRIPCION'] === searchLower)
+                                ? (schedules || [])?.filter((item: any) => item?.['DESKRIPZIOA-DESCRIPCION']?.['_text']?.toLocaleLowerCase()?.includes(searchLower) || item?.['DESKRIPZIOA-DESCRIPCION']?.['_text']?.toLocaleLowerCase() === searchLower)
                                 : [...(schedules ?? [])];
           return {
             schedules: sliceSchedules?.slice(0, slice),
@@ -143,7 +143,7 @@ export class SchedulePage {
         })
       )
     )
-    // ,tap(d => console.log('d => ',d))
+    ,tap(d => console.log('d => ',d))
   );
 
   constructor(

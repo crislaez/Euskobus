@@ -9,7 +9,7 @@
     "ERROR":"Ha ocurrido un error, desliza hacia abajo para recargar",
     "LINES":"Lineas",
     "STATIONS":"Paradas",
-    "GEOLOCATION":"Golocalización",
+    "GEOLOCATION":"Geolocalización",
     "SCHEDULES":"Horarios",
     "SCHEDULES_LINES":"Horarios / Lineas",
     "MAP":"Mapas",
@@ -18,7 +18,7 @@
     "LINE":"Linea",
     "NOTIFICATION_MESSAGE":"Puede que algunos puntos no se muestren correctamente",
     "CREATE_BY":"by Crislaez",
-    "APP_DESCRIPTION":"Euskalfic es una aplicacion para poder listar las incidencias, camaras, flows y delegaciones del pais vasco y poder viseualizarlas en el mapa",
+    "APP_DESCRIPTION":"Euskobus es una aplicacion para poder listar las las paradas, horarios, y lineas del Pais vasco y visualizarlas en el mapa",
     "APP_FIND":"Cualquier pregunta o problema, puede contactarme al correo crislaez30@gmail.com, o a través de los siguientes enlaces",
     "APP_FAREWELL":"Muchas gracias :)"
   },

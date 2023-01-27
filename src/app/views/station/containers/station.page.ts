@@ -8,7 +8,7 @@ import { getLastNumber, gotToTop, trackById } from '@euskobus/shared/utils/funci
 import { ComponentState } from '@euskobus/shared/utils/models';
 import { IonContent, Platform } from '@ionic/angular';
 import { Store } from '@ngrx/store';
-import { map, switchMap, tap } from 'rxjs';
+import { map, shareReplay, switchMap, tap } from 'rxjs';
 
 @Component({
   selector: 'app-station',
@@ -21,9 +21,9 @@ import { map, switchMap, tap } from 'rxjs';
     <div class="container components-background-dark">
       <h1 class="text-color-gradient">{{ 'COMMON.STATIONS' | translate }}</h1>
 
-      <div class="displays-center width-max heigth-min">
+      <div class="displays-center width-max heigth-min" *ngIf="stationStatus$ | async as stationStatus">
         <!-- FORM  -->
-        <form (submit)="searchSubmit($event)">
+        <form (submit)="searchSubmit($event)" *ngIf="['loaded']?.includes(stationStatus)">
           <ion-searchbar [placeholder]="'FILTERS.BY_NAME' | translate" [formControl]="search" (ionClear)="clearSearch($event)"></ion-searchbar>
         </form>
       </div>
@@ -109,7 +109,7 @@ export class StationPage {
   baseSlice: number = 10;
   search = new FormControl('');
 
-  stationStatus$ = this.store.select(fromStation.selectStatus);
+  stationStatus$ = this.store.select(fromStation.selectStatus).pipe(shareReplay(1));
   componentState!: ComponentState;
   trigger = new EventEmitter<ComponentState>();
   stationsInfo$ = this.trigger.pipe(
