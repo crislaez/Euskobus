@@ -17,7 +17,7 @@
 <hr>
 <img src="https://github.com/crislaez/Euskobus/blob/master/src/assets/images/euskobus_3.jpg" />
 <hr>
-<img src="https://github.com/crislaez/Euskobus/blob/master/src/assets/images/euskobus4.jpg" />
+<img src="https://github.com/crislaez/Euskobus/blob/master/src/assets/images/euskobus_4.jpg" />
 <hr>
 <img src="https://github.com/crislaez/Euskobus/blob/master/src/assets/images/euskobus_5.jpg" />
 <hr>
