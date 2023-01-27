@@ -1,4 +1,4 @@
-# Criptoin
+# Euskobus
 
 ## Tecnologias utilizadas
 
